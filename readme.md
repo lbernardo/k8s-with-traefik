@@ -19,6 +19,6 @@ http://localhost:8080
 
 ### Access services
 
-http://coalho.localhost
-http://mussarela.localhost
-http://cheddar.localhost
+- http://coalho.localhost
+- http://mussarela.localhost
+- http://cheddar.localhost
