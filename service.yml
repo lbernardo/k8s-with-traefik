@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cheddar
+spec:
+  selector:
+    app: cheddar
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: coalho
+spec:
+  selector:
+    app: coalho
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mussarela
+spec:
+  selector:
+    app: mussarela
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80

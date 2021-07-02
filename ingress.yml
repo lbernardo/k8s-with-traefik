@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cheese
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: cheddar.localhost
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: cheddar
+          servicePort: http
+  - host: coalho.localhost
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: coalho
+          servicePort: http
+  - host: mussarela.localhost
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: mussarela
+          servicePort: http

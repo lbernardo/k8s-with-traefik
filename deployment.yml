@@ -1,0 +1,72 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cheddar
+spec:
+  selector:
+    matchLabels:
+      app: cheddar
+  template:
+    metadata:
+      labels:
+        app: cheddar
+    spec:
+      containers:
+      - name: cheddar
+        image: traefik/whoami
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coalho
+spec:
+  selector:
+    matchLabels:
+      app: coalho
+  template:
+    metadata:
+      labels:
+        app: coalho
+    spec:
+      containers:
+      - name: coalho
+        image: traefik/whoami
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mussarela
+spec:
+  selector:
+    matchLabels:
+      app: mussarela
+  template:
+    metadata:
+      labels:
+        app: mussarela
+    spec:
+      containers:
+      - name: mussarela
+        image: traefik/whoami
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
